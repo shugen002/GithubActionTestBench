@@ -1,0 +1,13 @@
+name: Bot
+on:
+  issues:
+    types: opened
+  issue_comment:
+    types: created
+
+jobs:
+  check:
+    name: check
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo ${{ github.event }}
